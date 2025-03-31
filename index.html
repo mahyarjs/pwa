@@ -79,7 +79,19 @@
   kiri
 
   <script>
-    alert('kir')
+    let pwa = null;
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      pwa = e;
+    });
+
+    document.querySelector(".a").addEventListener("click", () => {
+      if (!pwa) {
+        return;
+      }
+      pwa.prompt("kos?").then((res) => console.log(res));
+    });
   </script>
 
 

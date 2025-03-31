@@ -36,20 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //   download.setAttribute("download", "filename.css");
 });
 
-let pwa = null;
 
-window.addEventListener("beforeinstallprompt", (e) => {
-  e.preventDefault();
-  pwa = e;
-});
 
-if (!window.matchMedia("(display-mode: standalone)").matches) {
-  document.querySelector(".a").addEventListener("click", () => {
-    if (!pwa) {
-      return;
-    }
-    pwa.prompt("kos?").then((res) => console.log(res));
-  });
-}
-
-alert('f')
+alert("f");

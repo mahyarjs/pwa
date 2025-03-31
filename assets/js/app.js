@@ -51,3 +51,5 @@ if (!window.matchMedia("(display-mode: standalone)").matches) {
     pwa.prompt("kos?").then((res) => console.log(res));
   });
 }
+
+alert('f')
